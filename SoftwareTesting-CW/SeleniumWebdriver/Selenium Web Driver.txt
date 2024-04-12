@@ -1,0 +1,131 @@
+Selenium Web Driver
+Browser commands:
+        // String title = driver.getTitle();
+        // System.out.println(title);
+        // String curl = driver.getCurrentUrl();
+        // System.out.println(curl);
+        // String page = driver.getPageSource();
+        // System.out.println(page);
+        // int l = driver.getPageSource().length();
+        // System.out.println(l);
+
+------------------------------------------------------------------------------------
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest {
+
+    /**
+     * Rigorous Test :-)
+     * 
+     * @throws InterruptedException
+     */
+    @Test
+    public void shouldAnswerWithTrue() throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://www.google.com");
+        driver.manage().window().maximize();
+        Thread.sleep(5000);
+        // String title = driver.getTitle();
+        // System.out.println(title);
+        // String curl = driver.getCurrentUrl();
+        // System.out.println(curl);
+        // String page = driver.getPageSource();
+        // System.out.println(page);
+        // int l = driver.getPageSource().length();
+        // System.out.println(l);
+        driver.quit();
+        // assertTrue( true );
+    }
+}
+------------------------------------------------------------------------------------
+package com.example;
+
+//import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest {
+
+    /**
+     * Rigorous Test :-)
+     * 
+     * @throws InterruptedException
+     */
+    @Test
+    public void shouldAnswerWithTrue() throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://www.google.com");
+        Thread.sleep(5000);
+        driver.findElement(By.className("gLFyf")).sendKeys("Selenium");
+        Thread.sleep(5000);
+        driver.quit();
+        // assertTrue( true );
+    }
+}
+-------------------------------------------------------------------------------
+package com.example;
+
+//import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest {
+
+    /**
+     * Rigorous Test :-)
+     * 
+     * @throws InterruptedException
+     */
+    @Test
+    public void shouldAnswerWithTrue() throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://placement.skcet.ac.in/login");
+        Thread.sleep(5000);
+        // driver.findElement(By.className("gLFyf")).sendKeys("Selenium");
+        // Thread.sleep(5000); // to show the content
+        driver.quit();
+        // assertTrue( true );
+    }
+}
+--------------------------------------------------------------------------------------------
+ WebDriverManager.chromedriver().setup();
+        WebDriver driver=new ChromeDriver();
+        driver.get("https://demoblaze.com/");
+        Thread.sleep(5000);
+        driver.findElement(By.linkText("Laptops")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.linkText("MackBook air")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.linkText("Add to cart")).click();
+        Thread.sleep(5000);
+        driver.switchTo().alert().accept();
+        driver.quit();
